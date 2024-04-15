@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+
+
+===========================
+RESET
+===========================
+*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+===========================
+BACKGROUNDS and COMMONS
+===========================
+*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  background-color: hsl(257, 40%, 49%);
+}
+.container {
+  background-image: url("./images/bg-desktop.svg");
+  width: 100%;
+  height: 100%;
+  /* background-position-x: 100px; */
+  /* background-position-y: -200px; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} /*
+===========================
+LAYOUT
+===========================
+*/
+.container,
+.everything {
+  display: flex;
+}
+.everything {
+  width: 1440px;
+  height: 800px;
+  justify-self: center;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+.logo {
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+header {
+  height: fit-content;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1400px;
+  height: 600px;
+  gap: 50px;
+  margin-top: 180px;
+  position: relative;
+}
+main {
+  width: 80%;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+/*
+===========================
+STYLING
+===========================
+*/
+h1 {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+}
+main > p {
+  font-size: 20px;
+}
+button {
+  color: hsl(257, 40%, 49%);
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  height: 55px;
+  border-radius: 30px;
+  background-color: white;
+  font-size: 1.125rem;
+  font-weight: 300;
+  transition: all 0.25s linear;
+}
+button:hover {
+  background-color: hsl(300, 69%, 71%);
+  cursor: pointer;
+  color: white;
+}
+/*
+===========================
+FOOTER
+===========================
+*/
+.fa-brands {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: white;
+  font-size: 20px;
+}
+.fa-facebook-f {
+  right: 12px;
+}
+.fa-instagram {
+  right: 10px;
+}
+.socialbg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.socialbg:hover {
+  cursor: pointer;
+  border: 1px solid hsl(300, 69%, 71%);
+}
+.socialbg:hover .fa-brands {
+  color: hsl(300, 69%, 71%);
+}
+.small {
+  display: none;
+}
+
+/*
+===========================
+FOR SCREEN SIZES
+===========================
+*/
+@media (max-width: 780px) {
+  .container {
+    background-image: url("./images/bg-mobile.svg");
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  header > :nth-child(2) {
+    width: 500px;
+  }
+  .everything {
+    flex-direction: column;
+  }
+  .logo {
+    margin-top: 0;
+  }
+  .box {
+    width: 600px;
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+  main {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  button {
+    width: 250px;
+  }
+  footer {
+    bottom: 0;
+    left: 160px;
+  }
+  .break {
+    display: none;
+  }
+  .small {
+    display: block;
+  }
+  main > h1 {
+    font-size: 30px;
+  }
+  main > p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+}
